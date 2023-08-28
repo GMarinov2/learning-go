@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  tika-server:
+    image: logicalspark/docker-tikaserver
+    container_name: tika-server
+    ports:
+      - 9998:9998                                 # kibana will start when elasticsearch has started
