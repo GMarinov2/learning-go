@@ -1,2 +1,2 @@
 run:
-	go run main.go --source=./data --destination=./output --tika="http://localhost:9998"
+	go run main.go --source="./data" --destination="./output" --tika="http://localhost:9998"
