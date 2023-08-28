@@ -4,11 +4,18 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"song-lyrics-indexer/args"
 	tikaclient "song-lyrics-indexer/tika-client"
 	"sync"
+
+	"github.com/alexflint/go-arg"
 )
 
 func main() {
+	args := args.Args{}
+
+	arg.MustParse(&args)
+
 	languageDetector := tikaclient.NewClient("http://localhost:9998")
 
 	filePaths, err := listFilesInDirectory("./data")
